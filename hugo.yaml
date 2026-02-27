@@ -1,3 +1,8 @@
-baseURL: https://example.org/
+baseURL: https://blog.ibnbaqi.com
 languageCode: en-us
-title: My New Hugo Project
+title: Abdulbaki's Blog
+theme: ["PaperMod"]
+
+caches:
+  images:
+    dir: :cacheDir/images
