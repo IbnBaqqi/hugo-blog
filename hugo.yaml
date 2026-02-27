@@ -1,30 +1,39 @@
+# Site Configuration
 baseURL: https://blog.ibnbaqi.com/
 languageCode: en-us
 title: Abdulbaki's Blog
 theme: ["PaperMod"]
+
+# Output Formats
+outputs:
+  home: ['html', 'rss', 'json']
+  section: ['html', 'rss']
+  taxonomy: ['html']
+  term: ['html']
 
 caches:
   images:
     dir: :cacheDir/images
 
 enableRobotsTXT: true
-buildDrafts: false
-buildFuture: false
-buildExpired: false
+# buildDrafts: false
+# buildFuture: false
+# buildExpired: false
 
-minifyOutput: true
 
+# Site parameters
 params:
+  mainSections: ["blog"]
   env: production
-  title: Your Blog Title
-  description: "Your blog description here"
+  # title: Your Blog Title
+  # description: "Your blog description here"
   keywords: [Blog, Portfolio, PaperMod]
   author: Salaudeen Abdulbaki
   # author: ["Me", "You"] # multiple authors
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
   defaultTheme: auto # dark, light
-  disableThemeToggle: false
+  # disableThemeToggle: false
 
   ShowReadingTime: true
   ShowShareButtons: true
@@ -42,25 +51,20 @@ params:
   showtoc: false
   tocopen: false
 
-  assets:
-    # disableHLJS: true # to disable highlight.js
-    # disableFingerprinting: true
-    favicon: "<link / abs url>"
-    favicon16x16: "<link / abs url>"
-    favicon32x32: "<link / abs url>"
-    apple_touch_icon: "<link / abs url>"
-    safari_pinned_tab: "<link / abs url>"
-
-  label:
-    text: "Home"
-    icon: /apple-touch-icon.png
-    iconHeight: 35
+  # assets:
+  #   # disableHLJS: true # to disable highlight.js
+  #   # disableFingerprinting: true
+  #   favicon: "<link / abs url>"
+  #   favicon16x16: "<link / abs url>"
+  #   favicon32x32: "<link / abs url>"
+  #   apple_touch_icon: "<link / abs url>"
+  #   safari_pinned_tab: "<link / abs url>"
 
   # profile-mode
   profileMode:
-    enabled: false # needs to be explicitly set
-    title: Salaudeen Abdulbaki
-    subtitle: "Your bio here"
+    enabled: false
+    title: Salaudeen Abdullbaki
+    subtitle: "Backend Software Engineer"
     imageUrl: "<img location>"
     imageWidth: 120
     imageHeight: 120
@@ -71,25 +75,27 @@ params:
       - name: Tags
         url: tags
 
-  # home-info mode
+  # Home Page Information
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: Welcome to my blog
+    Title: "{{< terminal-prompt >}}"
+    Content: "### Hey! I'm Abdulbaki\n Welcome to my corner of the internet. This website is a personal blog which I use as a platform to document my learning journey and showcase it for the world to see."
 
   socialIcons:
-    - name: X
-      url: "https://x.com/Salau_smart"
     - name: github
       url: "https://github.com/IbnBaqqi"
+    - name: email
+      url: "mailto:salausmart132@gmail.com"
+    - name: X
+      url: "https://x.com/Salau_smart"
     - name: linkedin
-      url: "https://linkedin.com/in/abdulbaki-salaudeen/"
+      url: "https://linkedin.com/in/abdulbaki-salaudeen"
 
   cover:
     hidden: true # hide everywhere but not in structured data
     hiddenInList: true # hide on list pages and home
     hiddenInSingle: true # hide on single page
 
-  # for search
+  # Search settings
   # https://fusejs.io/api/options.html
   fuseOpts:
     isCaseSensitive: false
@@ -102,19 +108,43 @@ params:
 
 menu:
   main:
-    - identifier: categories
-      name: Categories
-      url: /categories/
-      weight: 10
-    - identifier: tags
-      name: Tags
-      url: /tags/
-      weight: 20
-    - identifier: archives
-      name: Archives
-      url: /archives/
-      weight: 30
+    - identifier: home
+      name: Home
+      url: /
+      weight: 1
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 2
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 3
+    - identifier: shelf
+      name: Shelf
+      url: /shelf/
+      weight: 4
     - identifier: search
       name: Search
       url: /search/
-      weight: 40
+      weight: 5
+    # - identifier: archive
+    #   name: Archives
+    #   url: /archive/
+    # - identifier: tags
+    #   name: Tags
+    #   url: /tags/
+    #   weight: 4
+    # - identifier: categories
+    #   name: Categories
+    #   url: /categories/
+    #   weight: 5
+
+
+# Markup and Syntax Highlighting Settings
+markup:
+  highlight:
+  codeFences: true
+  guessSyntax: true
+  lineNos: false
+  noClasses: false
