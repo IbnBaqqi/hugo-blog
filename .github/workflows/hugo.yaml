@@ -1,4 +1,4 @@
-name: Build and deploy
+name: Build and deploy hugo site to pages
 on:
   push:
     branches:
