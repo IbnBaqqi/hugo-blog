@@ -16,8 +16,8 @@ caches:
     dir: :cacheDir/images
 
 enableRobotsTXT: true
+buildFuture: false
 # buildDrafts: false
-# buildFuture: false
 # buildExpired: false
 
 
@@ -25,29 +25,28 @@ enableRobotsTXT: true
 params:
   mainSections: ["blog"]
   env: production
-  # title: Your Blog Title
-  # description: "Your blog description here"
   keywords: [Blog, Portfolio, PaperMod]
-  author: Salaudeen Abdulbaki
-  # author: ["Me", "You"] # multiple authors
+  # author: Salaudeen Abdulbaki
   images: ["<link or path of image for opengraph, twitter-cards>"]
   DateFormat: "January 2, 2006"
-  defaultTheme: auto # dark, light
-  # disableThemeToggle: false
+  defaultTheme: dark
+  disableThemeToggle: true
+  archives: true
+  archiveSection: ["blog"]
 
   ShowReadingTime: true
   ShowShareButtons: true
   ShowPostNavLinks: true
-  ShowBreadCrumbs: true
+  ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
-  ShowWordCount: true
+  ShowWordCount: false
   ShowRssButtonInSectionTermList: true
   UseHugoToc: true
   disableSpecial1stPost: false
   disableScrollToTop: false
-  comments: false
+  comments: true
   hidemeta: false
-  hideSummary: false
+  hideSummary: true
   showtoc: false
   tocopen: false
 
@@ -89,6 +88,8 @@ params:
       url: "https://x.com/Salau_smart"
     - name: linkedin
       url: "https://linkedin.com/in/abdulbaki-salaudeen"
+    - name: rss
+      url: "https://blog.ibnbaqi.com/index.xml"
 
   cover:
     hidden: true # hide everywhere but not in structured data
@@ -135,11 +136,6 @@ menu:
     #   name: Tags
     #   url: /tags/
     #   weight: 4
-    # - identifier: categories
-    #   name: Categories
-    #   url: /categories/
-    #   weight: 5
-
 
 # Markup and Syntax Highlighting Settings
 markup:
