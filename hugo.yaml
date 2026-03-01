@@ -84,8 +84,6 @@ params:
       url: "https://github.com/IbnBaqqi"
     - name: email
       url: "mailto:salausmart132@gmail.com"
-    - name: X
-      url: "https://x.com/Salau_smart"
     - name: linkedin
       url: "https://linkedin.com/in/abdulbaki-salaudeen"
     - name: rss
